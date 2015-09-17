@@ -1,0 +1,54 @@
+<div class="container">
+    <p class="headText">Contact</p>
+    <div class="greenLine"></div>
+    <form role="form" name="supportContactForm" ng-submit="createContactMessage()"  novalidate="novalidate">
+      <div class="form-group">
+        <input
+          type="text"
+          placeholder="Your Name"
+          name="fullname"
+          minlength="2"
+          class="form-control input"
+          ng-maxlength="40"
+          ng-model="formData.fullname"
+          ng-model-options="{ updateOn: 'blur'}"
+          required />
+        <div class="messages"
+             ng-messages="supportContactForm.fullname.$error"
+             ng-if="supportContactForm.fullname.$touched || supportContactForm.$submitted"
+          >
+          <div class="error-message" ng-message="required">You did not enter your name.</div>
+          <div class="error-message" ng-message="minlength">Your name must be at least 2 characters long.</div>
+          <div class="error-message" ng-message="maxlength">Your name may not exceed 40 characters.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          placeholder="Your Email"
+          name="email"
+          class="form-control input"
+          minlength="5"
+          ng-maxlength="75"
+          ng-model="formData.email"
+          required />
+        <div ng-messages="supportContactForm.email.$error"
+             ng-if="supportContactForm.email.$touched || supportContactForm.$submitted">
+          <div class="error-message" ng-message="email">You did not enter a valid email address.</div>
+          <div class="error-message" ng-message="required">You did not enter your email.</div>
+          <div class="error-message" ng-message="minlength">Your email is too short.</div>
+          <div class="error-message" ng-message="maxlength">Your email is too long.</div>
+        </div>
+      </div>
+      <div class="form-group">
+            <textarea class="form-control" rows="10" cols="45" placeholder="Enter Your Message"  name="message"
+                      ng-model="formData.message" required></textarea>
+        <div class="messages"
+             ng-messages="supportContactForm.message.$error"
+             ng-if="supportContactForm.message.$touched || supportContactForm.$submitted">
+          <div class="error-message" ng-message="required">You did not type a message.</div>
+        </div>
+      </div>
+      <button type="submit" ng-disabled="supportContactForm.$invalid" class="btn submit btn-default">Send Message</button>
+    </form>
+</div>
