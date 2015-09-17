@@ -4,11 +4,11 @@ This project is generated with [yo angular generator](https://github.com/yeoman/
 
 ## Includes
 
-   Separated header and footer
-   Support form with ng-messages
-   Toastr alerts
-   General config file
-   Directives and Services
+   - Separated header and footer
+   - Support form with ng-messages
+   - Toastr alerts
+   - General config file
+   - Directives and Services
 
 
 ## Build & development
