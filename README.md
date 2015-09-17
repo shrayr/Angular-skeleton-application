@@ -1,9 +1,19 @@
-# app
+# Angular skeleton application
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1.
+
+## Includes
+
+   Separated header and footer
+   Support form with ng-messages
+   Toastr alerts
+   General config file
+   Directives and Services
+
 
 ## Build & development
+
+Run `npm install` and `bower install` 
 
 Run `grunt` for building and `grunt serve` for preview.
 
